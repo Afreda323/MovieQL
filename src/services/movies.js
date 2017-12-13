@@ -1,11 +1,12 @@
 const axios = require('axios')
 const { MOVIE_KEY, MOVIE_URL } = process.env
 
-const instance = axios.create({
-  baseURL: MOVIE_URL,
-  params: {
-    api_key: MOVIE_KEY,
-  },
-  timeout: 10000,
-})
-
+module.exports.getMovie = async id => {
+  const res = await axios.get(`${MOVIE_URL}movie/${id}`, {
+    params: {
+      api_key: MOVIE_KEY,
+      append_to_response: 'reviews,videos,images',
+    },
+  })
+  return res
+}
