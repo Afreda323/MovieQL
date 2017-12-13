@@ -1,17 +1,17 @@
-const { GraphQLObjectType, GraphQLString } = require('graphql')
+const { GraphQLObjectType, GraphQLString, GraphQLNonNull } = require('graphql')
 
-const testResolver = require('./resolvers/testResolver')
-const TestType = require('./types/TestType')
+const movieResolver = require('./resolvers/movieResolver')
+const MovieType = require('./types/MovieType')
 
 module.exports = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: () => ({
-    test: {
-      type: TestType,
+    movie: {
+      type: MovieType,
       args: {
-        text: { type: GraphQLString },
+        id: { type: new GraphQLNonNull(GraphQLString) },
       },
-      resolve: testResolver,
+      resolve: movieResolver,
     },
   }),
 })

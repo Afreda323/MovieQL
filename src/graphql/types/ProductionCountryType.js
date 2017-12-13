@@ -1,8 +1,9 @@
 const { GraphQLObjectType, GraphQLString } = require('graphql')
 
 module.exports = new GraphQLObjectType({
-  name: 'TestType',
+  name: 'ProductionCountryType',
   fields: () => ({
-    hello: { type: GraphQLString },
+    iso_3166_1: { type: GraphQLString },
+    name: { type: GraphQLString },
   }),
 })
