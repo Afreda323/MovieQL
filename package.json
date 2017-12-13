@@ -8,11 +8,17 @@
     "watch": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["moviedb", "tmdb", "graphql", "koa"],
+  "keywords": [
+    "moviedb",
+    "tmdb",
+    "graphql",
+    "koa"
+  ],
   "author": "Anthony Freda",
   "license": "ISC",
   "dependencies": {
     "@koa/cors": "^2.2.1",
+    "axios": "^0.17.1",
     "dotenv": "^4.0.0",
     "graphql": "^0.11.7",
     "koa": "^2.4.1",
