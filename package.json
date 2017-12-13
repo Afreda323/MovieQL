@@ -4,15 +4,24 @@
   "description": "This is a Koa and GraphQL backend that queries MovieDB",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["moviedb", "tmdb", "graphql", "koa"],
+  "author": "Anthony Freda",
   "license": "ISC",
   "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "dotenv": "^4.0.0",
     "graphql": "^0.11.7",
     "koa": "^2.4.1",
     "koa-graphql": "^0.7.3",
+    "koa-helmet": "^3.3.0",
+    "koa-logger": "^3.1.0",
     "koa-mount": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5"
   }
 }
