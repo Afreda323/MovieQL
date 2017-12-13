@@ -17,6 +17,7 @@ const VideoType = require('./VideoType')
 
 module.exports = new GraphQLObjectType({
   name: 'MovieType',
+  description: 'Get the primary information about a movie.',
   fields: () => ({
     adult: { type: GraphQLBoolean },
     backdrop_path: { type: GraphQLString },
