@@ -6,7 +6,7 @@ const cors = require('@koa/cors')
 const graphqlHTTP = require('koa-graphql')
 const schema = require('./graphql/Schema')
 
-const { PORT } = process.env
+const { PORT, NODE_ENV } = process.env
 
 // Create Koa Application
 const app = new Koa()

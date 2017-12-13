@@ -1,7 +1,7 @@
 const { GraphQLObjectType, GraphQLString } = require('graphql')
 
-const testResolver = require('./resolvers/test_resolver')
-const TestType = require('./types/test_type')
+const testResolver = require('./resolvers/testResolver')
+const TestType = require('./types/TestType')
 
 module.exports = new GraphQLObjectType({
   name: 'RootQueryType',
