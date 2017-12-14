@@ -7,6 +7,8 @@ const {
 
 module.exports = new GraphQLObjectType({
   name: 'MoviePlusType',
+  description:
+    'The definition of a movie list, similar to MovieListType, but missing some values',
   fields: () => {
     const MovieType = require('./MovieType')
     return {

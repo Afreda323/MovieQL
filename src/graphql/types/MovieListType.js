@@ -8,6 +8,7 @@ const MovieType = require('./MovieType')
 
 module.exports = new GraphQLObjectType({
   name: 'MovieListType',
+  description: "The definition of a movie list",
   fields: () => ({
     page: { type: GraphQLInt },
     results: { type: new GraphQLList(MovieType) },

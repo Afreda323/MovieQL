@@ -26,9 +26,11 @@ const MoviePlusType = require('./types/MoviePlusType')
 
 module.exports = new GraphQLObjectType({
   name: 'RootQueryType',
+  description: "The root querys",
   fields: () => ({
     movie: {
       type: MovieType,
+      description: "Search for a movie by ID",
       args: {
         id: { type: new GraphQLNonNull(GraphQLString) },
       },
@@ -36,6 +38,7 @@ module.exports = new GraphQLObjectType({
     },
     nowPlaying: {
       type: MovieListType,
+      description: "Get a list of movies currently in theaters.",
       args: {
         page: { type: new GraphQLNonNull(GraphQLInt) },
       },
@@ -43,6 +46,7 @@ module.exports = new GraphQLObjectType({
     },
     popular: {
       type: MovieListType,
+      description: "Get a list of the most popular movies right now.",
       args: {
         page: { type: new GraphQLNonNull(GraphQLInt) },
       },
@@ -50,6 +54,7 @@ module.exports = new GraphQLObjectType({
     },
     topRated: {
       type: MovieListType,
+      description: "Get a list of the highest ratest movies.",
       args: {
         page: { type: new GraphQLNonNull(GraphQLInt) },
       },
@@ -57,6 +62,7 @@ module.exports = new GraphQLObjectType({
     },
     upcoming: {
       type: MovieListType,
+      description: "Get a list of movies that are being released in the future.",
       args: {
         page: { type: new GraphQLNonNull(GraphQLInt) },
       },
@@ -64,6 +70,7 @@ module.exports = new GraphQLObjectType({
     },
     search: {
       type: MoviePlusType,
+      description: "Search for movies.",
       args: {
         query: { type: new GraphQLNonNull(GraphQLString) },
         page: { type: new GraphQLNonNull(GraphQLInt) },
@@ -72,6 +79,7 @@ module.exports = new GraphQLObjectType({
     },
     discover: {
       type: MoviePlusType,
+      description: "Get a list of movies based on a wide range of optional filters.",
       args: {
         page: { type: new GraphQLNonNull(GraphQLInt) },
         sort_by: {

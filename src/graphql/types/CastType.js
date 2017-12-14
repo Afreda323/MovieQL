@@ -7,6 +7,7 @@ const {
 
 module.exports = new GraphQLObjectType({
   name: 'CastType',
+  description: "The definition of a movie cast member",
   fields: () => ({
     cast_id: { type: GraphQLInt },
     character: { type: GraphQLString },
