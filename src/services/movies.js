@@ -21,7 +21,7 @@ module.exports.getMovie = async id => {
   const res = await axios.get(`${MOVIE_URL}movie/${id}`, {
     params: {
       api_key: MOVIE_KEY,
-      append_to_response: 'videos,credits',
+      append_to_response: 'videos,credits,images',
     },
   })
   return res.data

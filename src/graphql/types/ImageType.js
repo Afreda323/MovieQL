@@ -3,19 +3,19 @@ const {
   GraphQLString,
   GraphQLID,
   GraphQLInt,
+  GraphQLFloat,
 } = require('graphql')
 
 module.exports = new GraphQLObjectType({
-  name: 'video',
+  name: 'image',
   description: 'Get the videos that have been added to a movie.',
   fields: () => ({
-    id: { type: GraphQLID },
+    aspect_ratio: { type: GraphQLFloat },
+    file_path: { type: GraphQLString },
+    height: { type: GraphQLInt },
     iso_639_1: { type: GraphQLString },
-    iso_3166_1: { type: GraphQLString },
-    key: { type: GraphQLString },
-    name: { type: GraphQLString },
-    site: { type: GraphQLString },
-    size: { type: GraphQLInt },
-    type: { type: GraphQLString },
+    average: { type: GraphQLInt },
+    count: { type: GraphQLInt },
+    width: { type: GraphQLInt },
   }),
 })

@@ -22,6 +22,7 @@ const ProductionCompanyType = require('./ProductionCompanyType')
 const VideoType = require('./VideoType')
 const CastType = require('./CastType')
 const CrewType = require('./CrewType')
+const ImageType = require('./ImageType')
 const MoviePlusType = require('./MoviePlusType')
 
 module.exports = new GraphQLObjectType({
@@ -68,6 +69,19 @@ module.exports = new GraphQLObjectType({
         fields: () => ({
           results: {
             type: new GraphQLList(VideoType),
+          },
+        }),
+      }),
+    },
+    images: {
+      type: new GraphQLObjectType({
+        name: 'images',
+        fields: () => ({
+          backdrops: {
+            type: new GraphQLList(ImageType),
+          },
+          posters: {
+            type: new GraphQLList(ImageType),
           },
         }),
       }),
