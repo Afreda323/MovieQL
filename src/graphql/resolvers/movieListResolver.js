@@ -6,6 +6,10 @@ const {
   searchMovies,
 } = require('../../services/movieList')
 
+const {
+  getDiscover
+} = require('../../services/discover')
+
 module.exports.nowPlayingResolver = (_, { page }) => {
   return getNowPlaying(page)
 }
@@ -20,4 +24,7 @@ module.exports.topRatedResolver = (_, { page }) => {
 }
 module.exports.searchResolver = (_, { query, page }) => {
   return searchMovies(query, page)
+}
+module.exports.discoverResolver = (_, args) => {
+  return getDiscover(args)
 }

@@ -2,7 +2,7 @@ const {
   getMovie,
   getRecommendations,
   getSimilar,
-  searchMovies,
+  getDiscover
 } = require('../../services/movies')
 
 module.exports.movieResolver = (_, { id }) => {
@@ -13,5 +13,8 @@ module.exports.recommendationsResolver = ({ id }, { page }) => {
 }
 module.exports.similarResolver = ({ id }, { page }) => {
   return getSimilar(id, page)
+}
+module.exports.discoverResolver = (_, args) => {
+  return getDiscover(args)
 }
 

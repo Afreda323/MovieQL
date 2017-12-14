@@ -18,7 +18,9 @@ const {
   topRatedResolver,
   upcomingResolver,
   searchResolver,
+  discoverResolver
 } = require('./resolvers/movieListResolver')
+
 const MovieListType = require('./types/MovieListType')
 const MoviePlusType = require('./types/MoviePlusType')
 
@@ -89,7 +91,7 @@ module.exports = new GraphQLObjectType({
         vote_average_lte: { type: GraphQLFloat },
       },
       // include_video
-      // resolve: discoverResolver,
+      resolve: discoverResolver,
     },
   }),
 })
