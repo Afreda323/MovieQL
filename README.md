@@ -15,3 +15,5 @@ This is a Koa and GraphQL backend that queries for movies from MovieDB.
 ## What may be added later
 - TV
 - People
+- Companies
+- Netwoks
