@@ -1,5 +1,15 @@
-const { getMovie } = require('../../services/movies')
+const {
+  getMovie,
+  getRecommendations,
+  getSimilar,
+} = require('../../services/movies')
 
-module.exports = (_, { id }) => {
+module.exports.movieResolver = (_, { id }) => {
   return getMovie(id)
+}
+module.exports.recommendationsResolver = ({ id }, { page }) => {
+  return getRecommendations(id, page)
+}
+module.exports.similarResolver = ({ id }, { page }) => {
+  return getSimilar(id, page)
 }

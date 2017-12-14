@@ -8,12 +8,19 @@ const {
   GraphQLFloat,
 } = require('graphql')
 
+// Add on resolvers
+const {
+  recommendationsResolver,
+  similarResolver,
+} = require('../resolvers/movieResolver')
+
 // Import needed custom types
 const SpokenLanguageType = require('./SpokenLanguageType')
 const ProductionCountryType = require('./ProductionCountryType')
 const GenreType = require('./GenreType')
 const ProductionCompanyType = require('./ProductionCompanyType')
 const VideoType = require('./VideoType')
+const MoviePlusType = require('./MoviePlusType')
 
 module.exports = new GraphQLObjectType({
   name: 'MovieType',
@@ -59,6 +66,15 @@ module.exports = new GraphQLObjectType({
         }),
       }),
     },
+    similar: {
+      type: MoviePlusType,
+      args: { page: { type: GraphQLInt } },
+      resolve: similarResolver,
+    },
+    recommendations: {
+      type: MoviePlusType,
+      args: { page: { type: GraphQLInt } },
+      resolve: recommendationsResolver,
+    },
   }),
 })
-

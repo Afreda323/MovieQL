@@ -6,7 +6,7 @@ const {
 } = require('graphql')
 
 // MOVIE
-const movieResolver = require('./resolvers/movieResolver')
+const { movieResolver } = require('./resolvers/movieResolver')
 const MovieType = require('./types/MovieType')
 // MOVIE LIST
 const {
