@@ -20,6 +20,8 @@ const ProductionCountryType = require('./ProductionCountryType')
 const GenreType = require('./GenreType')
 const ProductionCompanyType = require('./ProductionCompanyType')
 const VideoType = require('./VideoType')
+const CastType = require('./CastType')
+const CrewType = require('./CrewType')
 const MoviePlusType = require('./MoviePlusType')
 
 module.exports = new GraphQLObjectType({
@@ -62,6 +64,19 @@ module.exports = new GraphQLObjectType({
         fields: () => ({
           results: {
             type: new GraphQLList(VideoType),
+          },
+        }),
+      }),
+    },
+    credits: {
+      type: new GraphQLObjectType({
+        name: 'credits',
+        fields: () => ({
+          cast: {
+            type: new GraphQLList(CastType),
+          },
+          crew: {
+            type: new GraphQLList(CrewType),
           },
         }),
       }),

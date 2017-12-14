@@ -1,8 +1,6 @@
 const axios = require('axios')
 const { MOVIE_KEY, MOVIE_URL } = process.env
 
-
-
 const getMoviePlus = async (id, page, endpoint) => {
   const res = await axios.get(`${MOVIE_URL}movie/${id}/${endpoint}`, {
     params: {
@@ -23,8 +21,9 @@ module.exports.getMovie = async id => {
   const res = await axios.get(`${MOVIE_URL}movie/${id}`, {
     params: {
       api_key: MOVIE_KEY,
-      append_to_response: 'videos',
+      append_to_response: 'videos,credits',
     },
   })
   return res.data
 }
+

@@ -1,14 +1,17 @@
 # MovieQL
-This is a Koa and GraphQL backend that queries MovieDB
+This is a Koa and GraphQL backend that queries for movies from MovieDB.
 
-To use, create a file called .env. Copy the .env.schema into it. Add your MovieDB API key.
+### How to use:
+- Create a file called .env
+- Copy the .env.schema into it. 
+- Add your MovieDB API key.
 
     npm install
 	npm start
 
-# TODO: 
-- Recommendations
+## TODO: 
 - Discover
-- Similar
-- Cast
-- Search
+
+## What may be added later
+- TV
+- People

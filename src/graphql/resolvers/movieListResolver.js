@@ -3,6 +3,7 @@ const {
   getPopular,
   getUpcoming,
   getTopRated,
+  searchMovies,
 } = require('../../services/movieList')
 
 module.exports.nowPlayingResolver = (_, { page }) => {
@@ -16,4 +17,7 @@ module.exports.upcomingResolver = (_, { page }) => {
 }
 module.exports.topRatedResolver = (_, { page }) => {
   return getTopRated(page)
+}
+module.exports.searchResolver = (_, { query, page }) => {
+  return searchMovies(query, page)
 }

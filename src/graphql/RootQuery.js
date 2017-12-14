@@ -14,8 +14,10 @@ const {
   popularResolver,
   topRatedResolver,
   upcomingResolver,
+  searchResolver
 } = require('./resolvers/movieListResolver')
 const MovieListType = require('./types/MovieListType')
+const MoviePlusType = require('./types/MoviePlusType')
 
 module.exports = new GraphQLObjectType({
   name: 'RootQueryType',
@@ -54,6 +56,14 @@ module.exports = new GraphQLObjectType({
         page: { type: GraphQLInt },
       },
       resolve: upcomingResolver,
+    },
+    search: {
+      type: MoviePlusType,
+      args: {
+        query: { type: GraphQLString },
+        page: { type: GraphQLInt },
+      },
+      resolve: searchResolver,
     },
   }),
 })

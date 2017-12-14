@@ -11,6 +11,17 @@ const getList = async (endpoint, page) => {
   return res.data
 }
 
+module.exports.searchMovies = async (query, page) => {
+  const res = await axios.get(`${MOVIE_URL}search/movie`, {
+    params: {
+      page,
+      query: encodeURIComponent(query),
+      api_key: MOVIE_KEY,
+    },
+  })
+  return res.data
+}
+
 module.exports.getPopular = async page => await getList('popular', page)
 module.exports.getUpcoming = async page => await getList('upcoming', page)
 module.exports.getTopRated = async page => await getList('top_rated', page)
