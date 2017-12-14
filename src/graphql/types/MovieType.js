@@ -58,6 +58,10 @@ module.exports = new GraphQLObjectType({
     video: { type: GraphQLBoolean },
     vote_average: { type: GraphQLFloat },
     vote_count: { type: GraphQLInt },
+    rating: {
+      description: 'Only for when searching user ratings',
+      type: GraphQLFloat,
+    },
     videos: {
       type: new GraphQLObjectType({
         name: 'videos',
@@ -81,6 +85,7 @@ module.exports = new GraphQLObjectType({
         }),
       }),
     },
+
     similar: {
       type: MoviePlusType,
       args: { page: { type: GraphQLInt } },
