@@ -32,11 +32,12 @@ Just movies querying right now, more will be added later
 - Create a file called .env
 - Copy the .env.schema into it. 
 - Add your MovieDB API key.
-- npm install
-- npm start or npm watch
-- Proceed to your "localhost:<PORT>/graphql" to view all possible queries and mutations 
+- Go yo your project directory in a terminal
+  - npm install
+  - npm start or npm watch
+- Proceed to your "localhost:PORT/graphql" to view all possible queries and mutations 
 
-## TODO: 
+## TODO(Eventually): 
 - TV
 - People
 - Companies

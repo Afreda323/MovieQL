@@ -13,5 +13,6 @@ module.exports = new GraphQLObjectType({
     upcoming: require('./queries/upcomingQuery'),
     search: require('./queries/searchQuery'),
     discover: require('./queries/discoverQuery'),
+    company: require('./queries/companyQuery'),
   }),
 })
