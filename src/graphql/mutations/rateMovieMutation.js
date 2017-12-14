@@ -6,7 +6,7 @@ const StatusType = require('../types/StatusType')
 
 module.exports = {
   type: StatusType,
-  description: 'Get a users rated movies',
+  description: 'Rate movie',
   args: {
     user_id: {
       type: new GraphQLNonNull(GraphQLString),

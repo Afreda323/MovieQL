@@ -22,12 +22,19 @@ module.exports.getRatings = async (id, sort_by) => {
   })
   return res.data
 }
+
 module.exports.rateMovie = async (user_id, movie_id, value) => {
   const qs = `?api_key=${MOVIE_KEY}&guest_session_id=${user_id}`
-
   const res = await axios.post(`${MOVIE_URL}movie/${movie_id}/rating${qs}`, {
     value,
   })
+  return res.data
+}
 
+module.exports.removeRating = async (user_id, movie_id, value) => {
+  const qs = `?api_key=${MOVIE_KEY}&guest_session_id=${user_id}`
+  const res = await axios.delete(`${MOVIE_URL}movie/${movie_id}/rating${qs}`, {
+    value,
+  })
   return res.data
 }
