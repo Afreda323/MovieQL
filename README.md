@@ -7,11 +7,8 @@ To use, create a file called .env. Copy the .env.schema into it. Add your MovieD
 	npm start
 
 # TODO: 
-- RECOMENDATIONS
-- SIMILAR
-- CAST
-- POPULAR 
-- UPCOMING
-- TOP RATED
-- NOW PLAYING
-- SEARCH
+- Recommendations
+- Discover
+- Similar
+- Cast
+- Search
