@@ -15,7 +15,7 @@ module.exports.searchMovies = async (query, page) => {
   const res = await axios.get(`${MOVIE_URL}search/movie`, {
     params: {
       page,
-      query: encodeURIComponent(query),
+      query,
       api_key: MOVIE_KEY,
     },
   })
