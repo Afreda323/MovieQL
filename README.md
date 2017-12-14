@@ -1,5 +1,7 @@
 # MovieQL
-This is a Koa and GraphQL backend that queries for movies from MovieDB.
+This is a Koa and GraphQL backend that queries for movies from MovieDB. 
+
+Just movies querying right now, more will be added later
 
 ### How to use:
 - Create a file called .env
@@ -9,10 +11,8 @@ This is a Koa and GraphQL backend that queries for movies from MovieDB.
 - npm start or npm watch
 
 ## TODO: 
-- Discover query
-- Add descriptions to all object types
-
-## What may be added later
+- Guest Sessions
+- Voting/Rating
 - TV
 - People
 - Companies

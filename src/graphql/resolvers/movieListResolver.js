@@ -6,9 +6,7 @@ const {
   searchMovies,
 } = require('../../services/movieList')
 
-const {
-  getDiscover
-} = require('../../services/discover')
+const { getDiscover } = require('../../services/discover')
 
 module.exports.nowPlayingResolver = (_, { page }) => {
   return getNowPlaying(page)
